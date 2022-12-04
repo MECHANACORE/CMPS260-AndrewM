@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>CMPS 260: Module 1 Homework</title>
+    <style>
+        * {
+            font-family: monospace;
+        }
+    </style>
+    <script>
+        // NOTE: You can enter both code and explanations. For an explanation, start
+        //       the line with '//' which indicates a comment.
+
+        // NOTE: console.log prints text to the browser console that you can enable
+        //       to see the output. It is a little bit more convenient than alert so
+        //       we will use it most of the time.
+
+        // NOTE: Please review the following links regularly:
+        //       https://appliedcomputerscience.org/arrays-vs-objects
+        //       https://appliedcomputerscience.org/no-prototype-vs-prototype
+        //       https://appliedcomputerscience.org/implementation-vs-interface
+
+
+
+        //----------------------------//
+        // Setting up the environment //
+        //----------------------------//
+        console.log("Setting up the environment");
+
+        // 1. When you are done copy this file to your jail and submit the link through Schoology.
+
+
+
+        //-------------------//
+        // JavaScript basics //
+        //-------------------//
+        console.log("JavaScript basics");
+
+        // 1. Figure out what the << operator does. HINT: it is related to &.
+        // << shifts the the first number bits to the left by the second number. 1 << 9 = 512
+
+
+
+        //--------------------//
+        // Control structures //
+        //--------------------//
+        console.log("Control structures");
+
+        // 1. Write an if statement that prints the number of days in a month to the console (using 3 letter abbreviations).
+        function DiM(mon) {
+            if (mon == "jan", mon == "mar", mon == "may", mon == "jul", mon == "aug", mon == "oct", mon == "dec") {
+                console.log(mon, "30");
+            }
+            else if (mon == "apr", mon == "jun", mon == "sep", mon == "nov", mon == "jun") {
+                console.log(mon, "31");
+            }
+            else if (mon == "feb") {
+                console.log(mon, "28");
+            }
+        }
+
+        DiM("jun")
+        // 2. Write a loop to calculate 1+2+3+...+n and print it to the console.
+        var n = 50;
+        for (let i = 0; i <= n; i++) { console.log(i); }
+
+
+
+        //-----------//
+        // Functions //
+        //-----------//
+        console.log("Functions");
+
+        // 1. Write a function to check if an array contains a specific number but is not at the start or the end.
+        function checkForNumber(arr, num) {
+            if (arr[0] == num || arr[arr.length - 1] == num) {
+                return false;
+            }
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == num) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log("Checking for number: " + checkForNumber([4, 2, 5, 3], 4)); // should be false
+        console.log("Checking for number: " + checkForNumber([4, 2, 5, 3], 3)); // should be false
+        console.log("Checking for number: " + checkForNumber([4, 2, 5, 7, 3], 2)); // should be true
+        console.log("Checking for number: " + checkForNumber([4, 2, 5, 7, 3], 13)); // should be false
+        console.log("Checking for number: " + checkForNumber([4, 2, 5, 5], 5)); // should be false
+
+
+
+        //-------------------------------------------//
+        // Object-oriented programming in JavaScript //
+        //-------------------------------------------//
+        console.log("Object-oriented programming in JavaScript");
+
+        // 1. Add methods to the following object to calculate the circumference and area.
+
+        function Rectangle(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        // ... add getCircumference and getArea methods ...
+        // HINT: use the prototype
+
+        Rectangle.prototype.getCircumference = function () {
+            return (this.width + this.height) * 2;
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        };
+
+        var rectangle = new Rectangle(10, 5);
+        console.log(rectangle.getCircumference());
+        console.log(rectangle.getArea());
+//console.log("The circumference for the rectangle is " + rectangle.getCircumference());
+//console.log("The area for the rectangle is " + rectangle.getArea());
+
+
+
+//---------------------//
+// Debugging and tools //
+//---------------------//
+
+// None.
+
+
+
+//-----------------------------------------------//
+// Introduction to ECMAScript 6 and ECMAScript 7 //
+//-----------------------------------------------//
+
+// None.
+
+
+
+//---------//
+// Project //
+//---------//
+
+// Normally a bigger programming task follows at the end.
+// We skip this in the first week.
+
+
+//Andrew Mintus
+
+    </script>
+</head>
+
+<body>
+    See Console!
+</body>
+
+</html>
